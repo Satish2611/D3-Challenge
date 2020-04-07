@@ -107,7 +107,7 @@ function updateXToolTip(chosenXAxis, circlesGroup) {
     .attr("class", "tooltip")
     .offset([10, -10])
     .html(function(d) {
-      return (`${d.abbr}`);
+      return (`${d.state}<br>${chosenXAxis} : ${d.povertyMoe}`);
     });
   console.log(toolTip);
   circlesGroup.call(toolTip);
@@ -144,7 +144,7 @@ console.log(circlesGroup)
     .attr("class", "tooltip")
     .offset([10, -10])
     .html(function(d) {
-    return (`${d.abbr}`);
+    return (`${d.state}<br>`);
     
     });
     console.log(toolTip);
